@@ -74,7 +74,7 @@ class PostDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
     def test_func(self):
         post = self.get_object()
         if self.request.user == post.author:
-            messages.warning(self.request,'Post deleted.')
+            messages.warning(self.request,'Post')
             return True
         return False
 
